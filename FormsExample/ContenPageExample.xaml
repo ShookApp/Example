@@ -20,6 +20,10 @@
                     VerticalOptions="Fill" Clicked="Button_Clicked" />
                 <BoxView Color="Silver" WidthRequest="150" HeightRequest="150"
                      HorizontalOptions="StartAndExpand" VerticalOptions="Start" />
+                <Button Text="Browser" FontSize="Large" HorizontalOptions="Center"
+                       VerticalOptions="Fill" Clicked="Button_OpenBrowser" />
+                <Button Text="NewPage" FontSize="Large" HorizontalOptions="Center"
+                        VerticalOptions="Center" Clicked="Button_NewPage" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

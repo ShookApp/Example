@@ -403,3 +403,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+FormsExample.Android/Resources/Resource.designer.cs
+FormsExample.iOS/FormsExample.iOS.csproj
+FormsExample.Android/FormsExample.Android.csproj
