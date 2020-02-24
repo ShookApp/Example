@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsExample.ContenPageExample"
+             xmlns:local="clr-namespace:FormsExample.resources.i18n">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="10, 20, 10, 5" />
+            <On Platform="Android" Value="10, 0, 10, 5" />
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout HeightRequest="3500">
+                <Label Text="{x:Static local:AppResource.AppName}" FontSize="40" HorizontalOptions="Center" />
+                <Label FontSize="20" HorizontalOptions="CenterAndExpand" Text="{x:Static local:AppResource.LabelExplanation}" />
+                <Entry Placeholder="{x:Static local:AppResource.InputPromptText}" VerticalOptions="Center" Keyboard="Text" />
+                <Button Text="{x:Static local:AppResource.FadeButton}" FontSize="Large" HorizontalOptions="Center"
+                    VerticalOptions="Fill" Clicked="Button_Clicked" />
+                <BoxView Color="Silver" WidthRequest="150" HeightRequest="150"
+                     HorizontalOptions="StartAndExpand" VerticalOptions="Start" />
+                <Button Text="{x:Static local:AppResource.BrowserButton}" FontSize="Large" HorizontalOptions="Center"
+                       VerticalOptions="Fill" Clicked="Button_OpenBrowser" />
+                <Button Text="{x:Static local:AppResource.NewPageButton}" FontSize="Large" HorizontalOptions="Center"
+                        VerticalOptions="Center" Clicked="Button_NewPage" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
