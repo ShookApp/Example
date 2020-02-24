@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <NeutralLanguage>de</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,6 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="resources\i18n\AppResource - Copy - Copy.Designer.cs">
+      <DependentUpon>AppResource.de-de.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="resources\i18n\AppResource.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -28,12 +34,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="resources\i18n\AppResource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="resources\i18n\AppResource.de.resx">
+      <Generator></Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="resources\i18n\AppResource.en.resx">
       <Generator></Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="resources\i18n\AppResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 </Project>
