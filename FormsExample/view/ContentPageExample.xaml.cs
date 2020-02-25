@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
-using System.Windows.Input;
-using Xamarin.Essentials;
 
 namespace FormsExample
 {
     public partial class ContentPageExample : ContentPage
     {
+        private App app;
+
         public ContentPageExample()
         {
             InitializeComponent();
+        }
+
+        internal void SetApp(App app)
+        {
+            this.app = app;
         }
 
         // Button clicked action for the "fade" button. Fades the button out and
@@ -26,9 +30,9 @@ namespace FormsExample
         }
 
         // Opens a new browser with a specific URL.
-        async void Button_OpenBrowser(object sender, EventArgs args)
+        void Button_OpenBrowser(object sender, EventArgs args)
         {
-            await Browser.OpenAsync("https://samofan.hopto.org", BrowserLaunchMode.SystemPreferred);
+            app.OpenBrowser("https://samofan.hopto.org");
         }
 
         // Pushes a new page of ContentPageExample to the stack.
