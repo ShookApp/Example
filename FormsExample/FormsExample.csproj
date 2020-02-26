@@ -31,9 +31,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>AppResource.resx</DependentUpon>
     </Compile>
-    <Compile Update="view\ContentPageExample.xaml.cs">
-      <DependentUpon>ContentPageExample.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,6 @@
-﻿using Xamarin.Essentials;
+﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace FormsExample
 {
@@ -8,14 +9,8 @@ namespace FormsExample
         public App()
         {
             InitializeComponent();
-            
-            // Creates a new instance of the ContentPageExample.
-            ContentPageExample contentPageExample = new ContentPageExample();
-            // Sets the App as a variable in the ContentPageExample to outsource
-            // some methods.
-            contentPageExample.SetApp(this);
-            
-            MainPage = new NavigationPage(contentPageExample);
+
+            MainPage = new NavigationPage(new ContenPageExample());
         }
 
         protected override void OnStart()
@@ -28,11 +23,6 @@ namespace FormsExample
 
         protected override void OnResume()
         {
-        }
-
-        internal async void OpenBrowser(string url)
-        {
-            await Browser.OpenAsync(url, BrowserLaunchMode.SystemPreferred);
         }
     }
 }
