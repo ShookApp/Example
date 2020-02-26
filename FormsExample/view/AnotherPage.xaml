@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FormsExample.view.AnotherPage"
+            xmlns:local="clr-namespace:FormsExample.resources.i18n">
+
+    <ContentPage Title="Seite 1">
+        <Label Text="Timo" FontSize="40" HorizontalOptions="Center"/>
+    </ContentPage>
+
+    <ContentPage Title="Seite 2">
+        <Label Text="Philipp" FontSize="40" HorizontalOptions="Center"/>
+    </ContentPage>
+
+    <ContentPage Title="Seite 3">
+        <Label Text="Arens" FontSize="40" HorizontalOptions="Center"/>
+    </ContentPage>
+</TabbedPage>

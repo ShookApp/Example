@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 
 using Xamarin.Forms;
-using System.Windows.Input;
 using Xamarin.Essentials;
+using FormsExample.view;
 
 namespace FormsExample
 {
@@ -30,7 +29,7 @@ namespace FormsExample
 
         void Button_NewPage(object sender, EventArgs args)
         {
-            Navigation.PushAsync(new ContenPageExample());
+            Navigation.PushAsync(new AnotherPage());
         }
     }
 }
